@@ -1,43 +1,88 @@
-# Linkly - URL Shortener
+# 🔗 Linkly - URL Shortener
 
-A modern, production-ready URL shortener built with Next.js 16, Prisma ORM, and Supabase PostgreSQL.
+<div align="center">
+
+A modern, production-ready URL shortener built with **Next.js 16**, **Prisma ORM**, and **Supabase PostgreSQL**. Transform long, unwieldy URLs into short, memorable links with just one click!
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.0.8-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Prisma](https://img.shields.io/badge/Prisma-7.0-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
+[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com/)
+
+</div>
+
+---
 
 ## 📸 Screenshots
 
-### Home Page
+<div align="center">
+<table>
+  <tr>
+    <td align="center"><b>🏠 Home Page</b></td>
+    <td align="center"><b>📊 Dashboard</b></td>
+    <td align="center"><b>📈 Analytics</b></td>
+  </tr>
+  <tr>
+    <td><img src="./public/Screenshot_1.png" width="300" alt="Home Page - Shorten URLs instantly"/></td>
+    <td><img src="./public/Screenshot_2.png" width="300" alt="Dashboard - Manage all your links"/></td>
+    <td><img src="./public/Screenshot_3.png" width="300" alt="Analytics - Track performance"/></td>
+  </tr>
+  <tr>
+    <td align="center"><i>Shorten URLs instantly with custom codes & QR generation</i></td>
+    <td align="center"><i>Manage all your links in one place</i></td>
+    <td align="center"><i>Track clicks & analyze performance</i></td>
+  </tr>
+</table>
+</div>
 
-![Home Page](./public/Screenshot_1.png)
+---
 
-### Dashboard
+## 🎯 What is Linkly?
 
-![Dashboard](./public/Screenshot_2.png)
+**Linkly** is a full-featured URL shortening service that helps you:
 
-### Analytics
+- **Simplify Sharing** — Convert long URLs into clean, shareable links
+- **Track Performance** — Monitor clicks, referrers, and engagement in real-time
+- **Brand Your Links** — Create custom short codes that reflect your brand
+- **Generate QR Codes** — Instantly create downloadable QR codes for any link
+- **Set Expiration** — Create temporary links that auto-expire when needed
 
-![Analytics](./public/Screenshot_3.png)
+Perfect for marketers, developers, content creators, and anyone who needs professional link management!
+
+---
 
 ## ✨ Features
 
-- 🔗 **URL Shortening** - Transform long URLs into short, memorable links
-- 📊 **Analytics Dashboard** - Track clicks, view popular links, and monitor performance
-- 📱 **QR Code Generation** - Generate downloadable QR codes for any short URL
-- 🔄 **Real-time Stats** - View click counts and analytics in real-time
-- 🌙 **Dark Mode** - Beautiful dark theme with glassmorphism design
-- 📤 **Social Sharing** - Share links to Twitter, WhatsApp, Telegram, LinkedIn, and Email
-- ⏰ **Link Expiration** - Set optional expiration dates for URLs
-- 🔒 **Custom Short Codes** - Choose your own custom short codes (optional)
-- 📈 **Click Tracking** - Detailed analytics with referrer and timestamp tracking
+| Feature                    | Description                                                                |
+| -------------------------- | -------------------------------------------------------------------------- |
+| 🔗 **URL Shortening**      | Transform long URLs into short, memorable links with a single click        |
+| 📊 **Analytics Dashboard** | Track clicks, view popular links, and monitor performance metrics          |
+| 📱 **QR Code Generation**  | Generate downloadable QR codes for any short URL — perfect for print media |
+| 🔄 **Real-time Stats**     | View click counts and analytics updated in real-time                       |
+| 🌙 **Dark Mode UI**        | Beautiful dark theme with glassmorphism design and smooth animations       |
+| 📤 **Social Sharing**      | One-click sharing to Twitter, WhatsApp, Telegram, LinkedIn, and Email      |
+| ⏰ **Link Expiration**     | Set optional expiration dates for time-sensitive campaigns                 |
+| 🔒 **Custom Short Codes**  | Choose your own branded short codes (e.g., `yourdomain.com/sale2024`)      |
+| 📈 **Click Tracking**      | Detailed analytics with referrer, user agent, and timestamp tracking       |
+| 📋 **Copy to Clipboard**   | Instant copy functionality for quick sharing                               |
+| 🗑️ **Link Management**     | Edit, delete, and organize your shortened URLs easily                      |
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 16.0.8](https://nextjs.org/) (App Router)
-- **Database**: [Supabase PostgreSQL](https://supabase.com/)
-- **ORM**: [Prisma 7](https://www.prisma.io/)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Charts**: [Recharts](https://recharts.org/)
-- **QR Codes**: [node-qrcode](https://github.com/soldair/node-qrcode)
-- **Toasts**: [Sonner](https://sonner.emilkowal.ski/)
-- **TypeScript**: Full type safety with `@/` import aliases
+| Technology                                            | Purpose                      | Version |
+| ----------------------------------------------------- | ---------------------------- | ------- |
+| [Next.js](https://nextjs.org/)                        | React Framework (App Router) | 16.0.8  |
+| [Supabase](https://supabase.com/)                     | PostgreSQL Database          | Latest  |
+| [Prisma](https://www.prisma.io/)                      | Type-safe ORM                | 7.x     |
+| [Tailwind CSS](https://tailwindcss.com/)              | Utility-first Styling        | 4.x     |
+| [TypeScript](https://www.typescriptlang.org/)         | Type Safety                  | 5.x     |
+| [Recharts](https://recharts.org/)                     | Analytics Charts             | Latest  |
+| [node-qrcode](https://github.com/soldair/node-qrcode) | QR Code Generation           | Latest  |
+| [Sonner](https://sonner.emilkowal.ski/)               | Toast Notifications          | Latest  |
+| [Zod](https://zod.dev/)                               | Schema Validation            | Latest  |
 
 ## 📋 Prerequisites
 
@@ -289,12 +334,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [Next.js](https://nextjs.org/) - The React Framework
+- [Next.js](https://nextjs.org/) - The React Framework for Production
 - [Supabase](https://supabase.com/) - Open Source Firebase Alternative
-- [Prisma](https://prisma.io/) - Next-generation ORM
+- [Prisma](https://prisma.io/) - Next-generation Node.js ORM
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS Framework
 - [Vercel](https://vercel.com/) - Deployment Platform
 
 ---
 
-Built with ❤️ using Next.js and Supabase
+<div align="center">
+
+### ⭐ Star this repo if you find it useful!
+
+Built with ❤️ by [DevStitch](https://github.com/devstitch)
+
+**[Live Demo](https://url-shortener-devstitch.vercel.app)** · **[Report Bug](https://github.com/devstitch/url-shortener/issues)** · **[Request Feature](https://github.com/devstitch/url-shortener/issues)**
+
+</div>
