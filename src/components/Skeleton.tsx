@@ -2,11 +2,15 @@
 
 interface SkeletonProps {
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Skeleton({ className = "" }: SkeletonProps) {
+export function Skeleton({ className = "", style }: SkeletonProps) {
   return (
-    <div className={`animate-pulse bg-gray-800/50 rounded ${className}`} />
+    <div
+      className={`animate-pulse bg-gray-800/50 rounded ${className}`}
+      style={style}
+    />
   );
 }
 
@@ -40,10 +44,13 @@ export function SkeletonTable() {
         <Skeleton className="h-4 w-20" />
         <Skeleton className="h-4 w-16 ml-auto" />
       </div>
-      
+
       {/* Rows */}
       {[...Array(5)].map((_, i) => (
-        <div key={i} className="border-b border-white/5 last:border-0 px-6 py-4 flex items-center gap-4">
+        <div
+          key={i}
+          className="border-b border-white/5 last:border-0 px-6 py-4 flex items-center gap-4"
+        >
           <Skeleton className="h-4 w-48" />
           <Skeleton className="h-6 w-16 rounded-md" />
           <Skeleton className="h-4 w-12" />
@@ -92,4 +99,3 @@ export function SkeletonChart() {
     </div>
   );
 }
-

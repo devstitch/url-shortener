@@ -2,7 +2,19 @@
 
 A modern, production-ready URL shortener built with Next.js 16, Prisma ORM, and Supabase PostgreSQL.
 
-![Linkly Screenshot](https://via.placeholder.com/800x400?text=Linkly+URL+Shortener)
+## 📸 Screenshots
+
+### Home Page
+
+![Home Page](./public/Screenshot_1.png)
+
+### Dashboard
+
+![Dashboard](./public/Screenshot_2.png)
+
+### Analytics
+
+![Analytics](./public/Screenshot_3.png)
 
 ## ✨ Features
 

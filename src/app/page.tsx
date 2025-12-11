@@ -185,7 +185,7 @@ export default function Home() {
 
             {/* Advanced Options */}
             {showAdvanced && (
-              <div className="space-y-4 p-4 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="space-y-4 p-4 rounded-xl bg-white/2 border border-white/5">
                 {/* Custom Short Code */}
                 <div className="space-y-2">
                   <label

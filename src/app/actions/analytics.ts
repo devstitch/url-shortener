@@ -145,7 +145,11 @@ export async function recordClickAndGetUrl(
 export async function getAnalytics(): Promise<AnalyticsResult> {
   try {
     const now = new Date();
-    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const todayStart = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate()
+    );
     const weekStart = new Date(todayStart);
     weekStart.setDate(weekStart.getDate() - 7);
     const monthStart = new Date(todayStart);
@@ -256,7 +260,11 @@ async function getClickTimeline(days: number): Promise<ClickTimelineData[]> {
   for (let i = days - 1; i >= 0; i--) {
     const date = new Date(now);
     date.setDate(date.getDate() - i);
-    const dayStart = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const dayStart = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    );
     const dayEnd = new Date(dayStart);
     dayEnd.setDate(dayEnd.getDate() + 1);
 
@@ -275,7 +283,11 @@ async function getClickTimeline(days: number): Promise<ClickTimelineData[]> {
     }
 
     timeline.push({
-      date: dayStart.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }),
+      date: dayStart.toLocaleDateString("en-US", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+      }),
       clicks,
     });
   }
@@ -309,7 +321,11 @@ export async function getUrlAnalytics(shortCode: string) {
     for (let i = 6; i >= 0; i--) {
       const date = new Date(now);
       date.setDate(date.getDate() - i);
-      const dayStart = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      const dayStart = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate()
+      );
       const dayEnd = new Date(dayStart);
       dayEnd.setDate(dayEnd.getDate() + 1);
 
@@ -359,7 +375,8 @@ export async function getUrlAnalytics(shortCode: string) {
     console.error("Error getting URL analytics:", error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : "Failed to get URL analytics",
+      error:
+        error instanceof Error ? error.message : "Failed to get URL analytics",
     };
   }
 }
@@ -367,7 +384,11 @@ export async function getUrlAnalytics(shortCode: string) {
 /**
  * Cleanup expired URLs
  */
-export async function cleanupExpiredUrls(): Promise<{ success: boolean; deletedCount?: number; error?: string }> {
+export async function cleanupExpiredUrls(): Promise<{
+  success: boolean;
+  deletedCount?: number;
+  error?: string;
+}> {
   try {
     const result = await prisma.url.deleteMany({
       where: {
@@ -385,7 +406,10 @@ export async function cleanupExpiredUrls(): Promise<{ success: boolean; deletedC
     console.error("Error cleaning up expired URLs:", error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : "Failed to cleanup expired URLs",
+      error:
+        error instanceof Error
+          ? error.message
+          : "Failed to cleanup expired URLs",
     };
   }
 }
